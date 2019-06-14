@@ -1,14 +1,126 @@
+<!--
+  Note: You should not have to modify this file. (You are allowed to, but
+  not expected to.)
+-->
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>CS193x Final Project</title>
-    <link rel="stylesheet" href="/css/style.css"/>
-    <script src="/js/script.js" defer></script>
-    </script>
-  </head>
-  <body>
-    <!-- TODO(you): Add the HTML necessary to complete your final project. -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>pokemongame</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="icon" type="image/png" href="images/pikachu.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="images/pikachu.png" sizes="16x16" />
+  <script src="https://code.jquery.com/pep/0.4.1/pep.js"></script>
+  <script src="main.js" defer></script>
+  <script type="text/javascript" src="game.js" defer></script>
+  <script type="text/javascript" src="playscreen.js" defer></script>
+  <script type="text/javascript" src="result.js" defer></script>
+  <script type="text/javascript" src="fetch.js" defer></script>
+</head>
+
+<body>
+
+  <div id="menu">
+    <div class="contents">
+      <header>
+        <h1>pokemon game</h1>
+        <h2>made by 405520002</h2>
+      </header>
+      <div id="choices1">play</div>
+      <div id='pokemon1'></div>
+
+    </div>
+  </div>
+
+  <div id="main" class="inactive">
+    <div id="flashcard-container" touch-action="none"></div>
+    <div id='gameoption'>
+      <div id='font'>choose your mode:</div>
+      <div id='paper'><span id='font2'>paper sissor stone</span></div>
+      <div id='paper2'><span id='font2'>history score</span></div>
+    </div>
+
+    <div class="status">
+      <div><span id="words"><span id='rules'>rules:</span><br><span id='game1' class='inactive'>paper sissor stone :use
+            paper sissor stone to beat the pokemons<br><span class='modify'>in original status:</span>you can get high score if you win but lose the score dramatically when you lose
+          <br><span class='modify'>in evolution status</span>:you may get low score if you win but lose the score slowly when yoy lose</span><span id='game2' class='inactive'>check the history score<span></span></div>
+    </div>
+  </div>
+
+
+
+  <div id="app1" class="inactive">
+    <div id="flashcard-container" touch-action="none"></div>
+    <div id='gameoption'>
+      <div id='font'> Your pokemon:</div>
+      <div id='paper3'><span id='font2'>original</span></div>
+      <div id='paper4'><span id='font2'>evolution</span></div>
+    </div>
+    <div id='startbutton'>start game</div>
+  </div>
+
+  <div id="gamescreen" class="inactive">
+    <div class='border'>
+      <h1 align='center' id='round'>Round1</h1>
+      <h1 class='offset'>hp</h1>
+      <div class='hp'></div>
+      <div id='enemy'></div>
+      <h1 class='offset2'>hp</h1>
+      <div class='hp2'></div>
+      <div id='player'></div>
+
+
+      <div id='playscreen'>
+
+        <div id='buttonarea'>
+          <h1 id='font1'>press the button<br> to attack</h1>
+          <h1 id='font1'>score:<br><spa id='score'>0</span></h1>
+          <div id='papers'></div>
+          <div id='sissors'></div>
+          <div id='stone'></div>
+          <div class='border high' id='evolution'>evolution</div>
+          <span id='words1'>The enemy's status:</span>
+          <div class='border high' id='enemystatus'></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="results" class="inactive">
+    <div class='border2'>
+    <h1>Results:</h1>
+    <h1>score:<span id='finalscore' name='fscore'></span>
+          <h1 class='modify'>save your score</h1>
+          <h1 class='modify'>input your name:</h1>
+          <input type='text'class='input' id='name'></input>
+          <button type='submit'id='send'>submit</button>
+          <div class='margin'>back to menu</div>
+          
+    </h1>
+    </div>
+    
+
+    </div>
+
+    <div id='history' class='inactive'>
+      <div class='border2'>
+          <h1 id='border3'>Player who had play this game</h1>
+          <div id='addplayer'></div>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+
+</body>
+
 </html>
